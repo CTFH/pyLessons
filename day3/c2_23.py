@@ -6,5 +6,5 @@ print(set(scores.values()))#scoresの値をセットに変換
 
 color_en=['red','green','blue']
 color_ja=['赤','緑','青']
-color=dict(zip(color_en.color_ja))
+color=dict(zip(color_en,color_ja))
 print(color)
