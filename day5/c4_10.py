@@ -5,5 +5,5 @@ for data in ages:
     if 20 <=data <30:
         samples.append(data)
         if len(samples)==num:
-            break;
+            break
 print(samples)
