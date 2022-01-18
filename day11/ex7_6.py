@@ -27,6 +27,6 @@ while(True):
         print('正解')
         break
     else:
-        if int(input('続けますか？ 1:続ける 2:終了 >>'))==2:
+        if int(input('続けますか？ 1:続ける 2:終了 >>'))!=1:
                 print(f'正解は{answer[0]}{answer[1]}{answer[2]}でした')
                 break
