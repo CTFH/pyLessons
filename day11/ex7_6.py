@@ -3,7 +3,7 @@ print('数あてゲームを始めます。３桁の数を当ててください�
 answer=[random.randint(0,9) for i in range(3)]
 #randint(0,9) → 0~9
 
-while(True):
+while True:
     prediction=[int(input(f'{i}桁目の予想を入力(0~9)>>'))for i in range(1,4)]
 
 #print(answer)
