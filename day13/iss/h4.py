@@ -33,6 +33,7 @@ def track_iss():
 
     canvas=tt.getcanvas() #下に同じ
     canvas.after(5000,track_iss)#5秒ごとに描画を更新するのにこれが必要
+    #track_issという関数を呼び出している
 
 setup()
 track_iss()
