@@ -12,9 +12,9 @@ def setup():
     screen.bgpic('earth.gif')
     #座標系を変換
     screen.setworldcoordinates(-180,-90,180,90)
-    tt.register_shape('iss.gif')
+    tt.register_shape('iss.gif')#※画像を登録
     iss=tt.Turtle()
-    iss.shape('iss.gif')
+    iss.shape('iss.gif')#見た目を変換 画像を登録と見た目を変換の2行にしないとできない
     iss.pencolor('red')
     iss.hideturtle()
     iss.penup()
