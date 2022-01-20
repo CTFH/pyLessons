@@ -35,8 +35,8 @@ def race():
                 winner_color=current_t.color()
                 current_t.write('Win!'+winner_color[0],font=('Arial',16,'normal'))
                 break
-        else:
-            continue
+        else: #途中で抜けたらelse通らず、その下のbreak
+            continue #loopの上（条件式）に行く
         break
 
 setup()
