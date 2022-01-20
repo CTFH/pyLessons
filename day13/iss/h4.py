@@ -7,13 +7,13 @@ iss=None; #初期化（いきなり1行書いておくわけにいかないか�
 
 def setup():
     global iss,screen
-    screen=tt.Screen()
+    screen=tt.Screen()#g画面を作る際にタートルモジュールのスクリーンメソッドを使用する
     screen.setup(1000,500)
     screen.bgpic('earth.gif')
     #座標系を変換
     screen.setworldcoordinates(-180,-90,180,90)
     tt.register_shape('iss.gif')#※画像を登録
-    iss=tt.Turtle()
+    iss=tt.Turtle()#インスタンス作成
     iss.shape('iss.gif')#見た目を変換 画像を登録と見た目を変換の2行にしないとできない
     iss.pencolor('red')
     iss.hideturtle() #最初隠しておいて現在地のところから始めるため
