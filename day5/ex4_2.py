@@ -8,5 +8,5 @@ while True: #while ans == True:
         count +=1
     else:
         #ans = False
-        print('ごちそうさまでした')　#printが左
+        print('ごちそうさまでした') #printが左
         break #breakなし

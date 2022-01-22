@@ -1,12 +1,13 @@
 import random
 import json
 
-json_file=open('HW.json', 'r')
-json_object=json.load(json_file)
+json_file = open("HW2.json", "r")
+json_obj = json.load(json_file)
+print(json_obj)
 
 ans=[]
 for i in range(3):
-    ans[i]=input(json_object[random.randint(1,11)])
+    ans[i]=input(json_obj[random.randint(1,11)])
     ans[3]=int(input('レースで勝つのは何色の亀?'))
 
 right=0
@@ -14,7 +15,7 @@ if q1==ans[0]:
     right +=1
 if q2==ans[1]:
     right +=1
-if q3==:
+if q3==qqq:
     right +=1
 
 if right == 0:
