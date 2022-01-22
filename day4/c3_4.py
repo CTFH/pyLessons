@@ -14,7 +14,7 @@ else:
     print('ng')
 
 key='red'
-if key in {'red':'赤','blue':'青'}
+if key in {'red':'赤','blue':'青'}:
     print('ok')
 else:
     print('ng')
