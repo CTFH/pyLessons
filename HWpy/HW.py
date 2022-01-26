@@ -1,7 +1,7 @@
 import random
 import json
 
-json_file = open("HW2.json", "r")
+json_file = open("HW2.json", "r",encoding="utf-8")
 json_obj = json.load(json_file)
 print(json_obj)
 
