@@ -20,8 +20,8 @@ dataA=[2,1,3,1,3,2,2,1,2,3,1]
 
 ans=[]
 for i in range(3):
-    ans[i]=int(input(data[random.randint(0,10)]))
-    ans.append(ans[i])
+    n=int(input(data[random.randint(0,10)]))
+    ans.append(n)
 
 t=turtle.Turtle()
 t.shape('turtle')
@@ -40,9 +40,9 @@ right=0
 def race():
     finishline=200
 
-    for t in range(3):
+    for k in range(3):
         move = 100
-        if ans[t]==dataA[t]:
+        if ans[k]==dataA[k]:
             t.forward(move)
             global right
             right +=1
@@ -52,6 +52,7 @@ def race():
                 t.write('Gold medal!!',font=('Arial',26,'normal'))
 
 
+race()
 
 if right == 0:
     print('ぼちぼち行こう')
@@ -61,3 +62,5 @@ elif right==2:
     print('銀メダル')
 else :
     print('金メダル')
+
+turtle.mainloop()
