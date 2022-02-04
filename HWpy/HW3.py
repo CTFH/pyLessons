@@ -2,30 +2,35 @@ import random
 import turtle
 import json
 
-json_file = open("HW2.json", "r",encoding="utf-8")
+json_file = open("HW3.json", "r",encoding="utf-8")
 json_obj = json.load(json_file)
-print(json_obj)
+#print(json_obj)
+json_arr=json_obj['Data']
+#print(json_obj['Data'])
+#print(json_arr[0]['Q'])
+
 
 ans=[]
 for i in range(3):
     ids=random.randint(0,10)
-    n=int(input(json_obj[ids]))
-    
-    ans[3]=int(input('レースで勝つのは何色の亀?'))
+    n=int(input(json_arr[ids]['Q']))
 
+    if n==json_arr[ids]['A']:
+        ans.append(True)
+    else:
+        ans.append(False)
 
-
-
-
+'''
 ans=[]
 for i in range(3):
     ids=random.randint(0,10)
     n=int(input(data[ids]))
     if dataA[ids]==n:
-        ans.append(True)
+    if 
+       ans.append(True)
     else:
         ans.append(False)
-
+'''
 
 t=turtle.Turtle()
 t.shape('turtle')
