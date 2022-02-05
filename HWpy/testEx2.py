@@ -11,30 +11,21 @@ random.shuffle(members)
 
 teamNum=int(input('いくつチームを作りますか(1-12)?'))
 
-alph=[A,B,C,D,E,F,G,H,I,J,K,L]
-for i in range teamNum:
-    list(alph[i]) = []
+teamNames=string.ascii_uppercase
 
-#teamPpl=len(members)//teamNum
-#teamPplEx=len(members)%teamNum
+data=[{'teamName':'チーム'+str(teamNames[i]),
+        'teamMembers':[],
+        'teamReader':None}
+        for i in range(teamNum)]
 
-for i in range (len(members)):
-    list(alph[i])=members[i]
+for i in range(len(members)):
+    member=members[i]
+    data[i%len(data)]['teamMembers'].append(member)
+    if i<teamNum:
+        data[i%len(data)]['teamReader']=member
 
-length=int(len(members)/teamNum)
-#if len(members)%teamNum!=0:
- #   len(members)//teamNum
-
-
-
-A=[]
-for i in range(length):
-    A.append(members[i])
-
-
-print('--チームA--')
-print(f'reader:{A[0]}')
-for i in range (len(A)):
-    print(A[i])
-
-
+for team in data:
+    print(f"---{team['teamName']}---")
+    print(f"reader:{team['teamReader']}")
+    for name in team['teamMemebers']:
+        print(name)

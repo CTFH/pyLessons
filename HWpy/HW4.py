@@ -11,12 +11,11 @@ json_arr=json_obj['Data']
 
 
 ans=[]
-for i in range(3):
-    ids=random.randint(0,len(json_arr)-i)
-    json_arr[ids]=json_arr[len(json_arr)-1-i]
-    n=int(input(json_arr[ids]['Q']))
+ids=random.sample(json_arr,3)
+for i in range(3):   
+    n=int(input(ids[i]['Q']))
 
-    if n==json_arr[ids]['A']:
+    if n==ids[i]['A']:
         ans.append(True)
     else:
         ans.append(False)
