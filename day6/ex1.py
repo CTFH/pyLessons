@@ -6,3 +6,4 @@ print(result)
 
 result=calc(5) #nに5が入る
 print(result)
+
